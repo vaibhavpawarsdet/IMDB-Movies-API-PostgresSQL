@@ -27,6 +27,6 @@ app.listen(PORT, () => {
     console.log(`server running port ${PORT}`);
 });
 
-app.get("/", (req, res) => {
-    res.json({ message: "starting new application"});
-});
+// app.get("/", (req, res) => {
+//     res.json({ message: "starting new application"});
+// });
