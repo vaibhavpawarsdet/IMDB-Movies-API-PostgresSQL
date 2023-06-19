@@ -11,7 +11,7 @@ exports.create = (req, res) => {
         });
         return;
     }    
-
+   
     //create movie
     const movie = {
         title: req.body.title,
