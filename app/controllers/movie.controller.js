@@ -6,7 +6,7 @@ const Op = db.Sequelize.Op;
 exports.create = (req, res) => {
     //Validate request
     if (!req.body.title) {
-        res.status(400).send({
+        res.sendStatus(400).send({
             message: "content can not be empty"
         });
         return;
@@ -16,7 +16,8 @@ exports.create = (req, res) => {
     const movie = {
         title: req.body.title,
         description: req.body.description,
-        rating: req.body.rating,
+        release_date: req.body.release_date,
+        language: req.body.language,
         published: req.body.published ? req.body.published : false
     };
 
@@ -37,7 +38,7 @@ exports.findAll = (req, res) => {
     Movie.findAll({ where: condition }).then(data => {
         res.send(data);
     }).catch((err) => {
-        res.send(500).send({
+        res.sendStatus(500).send({
             message: err.message || "Error occured while tetrieving movies."
         });
     });
