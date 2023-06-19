@@ -10,7 +10,7 @@ exports.create = (req, res) => {
             message: "content can not be empty"
         });
         return;
-    }
+    }    
 
     //create movie
     const movie = {
