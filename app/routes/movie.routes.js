@@ -20,4 +20,3 @@ module.exports = app => {
 
     app.use("/api/movies", router);
 }
-
