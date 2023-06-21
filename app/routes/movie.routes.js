@@ -14,7 +14,7 @@ module.exports = app => {
 
     //update movie with id
     router.put("/:id", movies.update);
-
+   
     //delete a movie with id
     router.delete("/:id", movies.delete);
 
