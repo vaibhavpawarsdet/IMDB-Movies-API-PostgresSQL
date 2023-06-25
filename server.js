@@ -28,4 +28,4 @@ app.listen(PORT, () => {
 
 app.get("/", (req, res) => {
     res.json({ message: "starting new application"});
-});
+});    
